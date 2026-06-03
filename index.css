@@ -1,6 +1,6 @@
 div#container
 {
-   width: 600px;
+   width: 701px;
    position: relative;
    margin: 0 auto 0 auto;
    text-align: left;
@@ -37,24 +37,6 @@ a:hover
 input:focus, textarea:focus, select:focus
 {
    outline: none;
-}
-#wb_Text1 
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px solid #FFFFFF;
-   border-image-source: url();
-   border-image-slice: ;
-   border-image-width: 0px;
-   border-image-repeat: stretch;
-   border-radius: 6px;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text1 div
-{
-   text-align: left;
 }
 #wb_Image1
 {

@@ -47,8 +47,6 @@ input:focus, textarea:focus, select:focus
    border: 0px solid #000000;
    border-radius: 0px;
    padding: 0;
-   -webkit-animation: funny-in 1000ms linear 0ms 1 normal both;
-   animation: funny-in 1000ms linear 0ms 1 normal both;
    margin: 0;
    left: 0;
    top: 0;
@@ -64,8 +62,6 @@ input:focus, textarea:focus, select:focus
    border: 0px solid #000000;
    border-radius: 0px;
    padding: 0;
-   -webkit-animation: slide-left-in 1000ms linear 0ms 1 normal both;
-   animation: slide-left-in 1000ms linear 0ms 1 normal both;
    filter: drop-shadow(3px 0px 10px rgba(127,255,212,1.00));
    margin: 0;
    left: 0;
@@ -82,8 +78,6 @@ input:focus, textarea:focus, select:focus
    border: 0px solid #000000;
    border-radius: 0px;
    padding: -50px -50px -50px -50px;
-   -webkit-animation: animate-rotate-in-left 1000ms linear 0ms 1 normal both;
-   animation: animate-rotate-in-left 1000ms linear 0ms 1 normal both;
    -webkit-transform: rotate(337deg);
    transform: rotate(337deg);
    -webkit-transform-origin: 50% 50%;
