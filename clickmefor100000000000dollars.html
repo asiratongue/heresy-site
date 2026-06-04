@@ -6,6 +6,33 @@
 <meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
 <link href="heresyworld.css" rel="stylesheet">
 <link href="clickmefor100000000000dollars.css" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-03DWXFS5H3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-03DWXFS5H3'); // Your real ID linked cleanly
+
+  // 2. This part counts exactly WHICH link was pressed
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.addEventListener('click', (event) => {
+      // Looks for a 'data-platform' label on the clicked button
+      const button = event.target.closest('[data-platform]');
+      
+      if (button) {
+        const platform = button.getAttribute('data-platform'); 
+        const destinationUrl = button.getAttribute('href');
+
+        // Sends the specific platform name (Spotify, YouTube, etc.) to GA4
+        gtag('event', 'linktree_click', {
+          'link_platform': platform,
+          'destination_url': destinationUrl
+        });
+      }
+    });
+  });
+</script>
 </head>
 <body>
 <div id="container">
@@ -37,6 +64,10 @@
 <span style="color:#000000;font-family:Arial;font-size:9.3px;">models provided courtesy of @final_loss<br></span></div>
 <div id="wb_Image1" style="position:absolute;left:40px;top:1121px;width:756px;height:567px;z-index:5;">
 <a href="./index.html"><img src="images/home button.png" id="Image1" alt="" width="835" height="626"></a></div>
+<div id="wb_Text2" style="position:absolute;left:0px;top:8px;width:370px;height:30px;z-index:6;">
+<span style="background-color:#000000;color:#000000;font-family:Arial;font-size:13px;">asdasdasdsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span></div>
+<div id="wb_Text3" style="position:absolute;left:7px;top:56px;width:616px;height:15px;z-index:7;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></div>
 </div>
 </body>
 </html>
