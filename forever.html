@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<link href="heresyworld.css" rel="stylesheet">
+<link href="forever.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="wb_Text2" style="position:absolute;left:232px;top:0px;width:902px;height:90px;z-index:1;">
+<span style="color:#FFFFFF;font-family:'Bebas Neue';font-size:75px;">&quot;LANDING &quot;</span></div>
+<div id="Html1" style="position:absolute;left:9px;top:90px;width:683px;height:528px;z-index:2">
+<!-- Proprietary Fan Portal Container -->
+<div class="artist-portal-container">
+  <form id="release-signup-form">
+    
+    <!-- Proprietary Minimal Input Box -->
+    <div class="portal-input-wrapper">
+      <input 
+        type="email" 
+        name="email" 
+        id="fan-email" 
+        placeholder="ENTER EMAIL FOR EARLY ACCESS (OPTIONAL)" 
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Proprietary Red Action Link -->
+    <div class="portal-link-wrapper">
+      <button type="submit" id="spotify-direct-btn">Truth</button>
+    </div>
+
+  </form>
+</div>
+
+<!-- Custom Modular Stylesheet -->
+
+<script>
+document.getElementById('release-signup-form').addEventListener('submit', function(e) {
+    // Stop the browser from forcing a full page reload
+    e.preventDefault();
+    
+    var emailVal = document.getElementById('fan-email').value;
+
+    // 1. Silent asynchronous background sync to Kit database
+    if (emailVal.trim() !== "") {
+        // Swap out the URL below with your Kit action URL
+        fetch("https://app.kit.com/forms/9535353/subscriptions", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ "email_address": emailVal }) // Kit API uses email_address
+        }).catch(function(err) { 
+            console.log("Background email log handled."); 
+        });
+    }
+
+    // 2. Simultaneously snap open the Spotify Native Mobile App
+    window.location.href = "spotify:artist:6MNAaYgMqEhU5rXvo32oRN";
+
+    // 3. Desktop or fallback browser routing
+    var start = Date.now();
+    setTimeout(function() {
+        if (Date.now() - start < 1500) {
+            window.location.href = "https://open.spotify.com/artist/6MNAaYgMqEhU5rXvo32oRN";
+        }
+    }, 1000);
+});
+</script></div>
+</body>
+</html>
