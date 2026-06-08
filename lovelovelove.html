@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<div id="wb_Text2" style="position:absolute;left:231px;top:0px;width:902px;height:90px;z-index:1;">
+<div id="wb_Text2" style="position:absolute;left:0px;top:0px;width:600px;height:90px;z-index:1;">
 <span style="color:#FFFFFF;font-family:'Bebas Neue';font-size:75px;">&quot;LANDING &quot;</span></div>
-<div id="Html1" style="position:absolute;left:9px;top:90px;width:683px;height:528px;z-index:2">
+<div id="Html1" style="position:absolute;left:31px;top:90px;width:538px;height:383px;z-index:2">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,10 +78,12 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
 
 </body>
 </html></div>
-<div id="Html3" style="position:absolute;left:197px;top:712px;width:254px;height:191px;z-index:3">
-<div id="countdown-container" style="display: inline-block; transform: scaleX(-1);">
-<div id="countdown" style="font-family: times new roman; font-size: 60px; color: white;"></div>
+<div id="Html3" style="position:absolute;left:121px;top:767px;width:270px;height:200px;z-index:3">
+<div id="countdown-container" style="display: inline-block; transform: scaleX(-1); animation: breathe 4s ease-in-out infinite;">
+    <div id="countdown" style="font-family: times new roman; font-size: 60px; color: white;"></div>
 </div>
+
+
 <script>
     // Target date: Jan 29, 2103
     const targetDate = new Date("Jan 29, 2103 00:00:00").getTime();
@@ -90,10 +92,8 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
         const now = new Date().getTime();
         const distance = targetDate - now;
 
-        // Math to calculate days, hours, minutes, seconds
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         
-        // Output to the div
         document.getElementById("countdown").innerHTML = days;
 
         if (distance < 0) {
@@ -102,7 +102,7 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
         }
     }, 1000);
 </script></div>
-<div id="Html2" style="position:absolute;left:215px;top:474px;width:270px;height:230px;z-index:4">
+<div id="Html2" style="position:absolute;left:143px;top:497px;width:270px;height:230px;z-index:4">
 <div id="uk-countdown" style="font-family: times new roman; font-size: 30px; color: #FF0000;">
     Loading...
 </div>
@@ -132,7 +132,5 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
     updateUKCountdown();
     setInterval(updateUKCountdown, 1000);
 </script></div>
-<div id="wb_Image2" style="position:absolute;left:169px;top:1104px;width:333px;height:333px;z-index:5;">
-<img src="images/truth-gif-template.gif" id="Image2" alt="" width="333" height="333"></div>
 </body>
 </html>
