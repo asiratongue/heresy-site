@@ -32,13 +32,15 @@
                 type="email" 
                 name="fields[email]" 
                 id="fan-email" 
-                placeholder="ENTER EMAIL FOR EARLY ACCESS (OPTIONAL)" 
+                placeholder="ENTER EMAIL 4 EARLY ACCESS (OPTIONAL)" 
                 autocomplete="off"
             />
         </div>
 
         <div class="portal-link-wrapper">
-            <button type="submit" id="spotify-direct-btn">Truth</button>
+            <button type="submit" id="spotify-direct-btn">
+                <img src="https://raw.githubusercontent.com/asiratongue/heresy-site/refs/heads/main/images/truth-gif-template.gif" alt="Truth">
+            </button>
         </div>
 
     </form>
@@ -52,7 +54,6 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
     var emailVal = emailInput.value.trim();
     var btn = document.getElementById('spotify-direct-btn');
 
-    // SCENARIO 1: They left it blank. Don't wait, just go to Spotify immediately.
     if (emailVal === "") {
         e.preventDefault(); 
         window.location.href = "spotify:artist:6MNAaYgMqEhU5rXvo32oRN";
@@ -61,23 +62,15 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
         }, 1000);
         return;
     }
-
-    // SCENARIO 2: They entered an email. 
-    // We let the form submit natively to the iframe. DO NOT use e.preventDefault() here.
     
-    // Give visual feedback so they know it registered
     btn.classList.add('processing');
 
-    // Wait exactly 800ms. This is the "sweet spot" that gives the phone's network 
-    // enough time to securely hand the data off to MailerLite before we kill the browser tab's current state.
     setTimeout(function() {
-        // Now launch Spotify
         window.location.href = "spotify:artist:6MNAaYgMqEhU5rXvo32oRN";
         
-        // Desktop fallback
         setTimeout(function() {
             window.location.href = "https://open.spotify.com/artist/6MNAaYgMqEhU5rXvo32oRN";
-            btn.classList.remove('processing'); // reset button
+            btn.classList.remove('processing');
         }, 1000);
     }, 800);
 });
@@ -85,7 +78,61 @@ document.getElementById('release-signup-form').addEventListener('submit', functi
 
 </body>
 </html></div>
-<div id="wb_Image1" style="position:absolute;left:119px;top:241px;width:133px;height:133px;z-index:3;">
-<img src="images/test.gif" id="Image1" alt="" width="133" height="133"></div>
+<div id="Html3" style="position:absolute;left:197px;top:712px;width:254px;height:191px;z-index:3">
+<div id="countdown-container" style="display: inline-block; transform: scaleX(-1);">
+<div id="countdown" style="font-family: times new roman; font-size: 60px; color: white;"></div>
+</div>
+<script>
+    // Target date: Jan 29, 2103
+    const targetDate = new Date("Jan 29, 2103 00:00:00").getTime();
+
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        // Math to calculate days, hours, minutes, seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        
+        // Output to the div
+        document.getElementById("countdown").innerHTML = days;
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script></div>
+<div id="Html2" style="position:absolute;left:215px;top:474px;width:270px;height:230px;z-index:4">
+<div id="uk-countdown" style="font-family: times new roman; font-size: 30px; color: #FF0000;">
+    Loading...
+</div>
+
+<script>
+    function updateUKCountdown() {
+        const now = new Date();
+        
+        // Calculate milliseconds passed since local midnight
+        const midnight = new Date();
+        midnight.setHours(24, 0, 0, 0); // Sets time to 00:00:00 of the NEXT day
+        
+        const diff = midnight - now; // Difference in milliseconds
+        
+        // Convert to HH:MM:SS
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        
+        const display = [hours, minutes, seconds]
+            .map(val => String(val).padStart(2, '0'))
+            .join(':');
+            
+        document.getElementById("uk-countdown").innerHTML = display;
+    }
+
+    updateUKCountdown();
+    setInterval(updateUKCountdown, 1000);
+</script></div>
+<div id="wb_Image2" style="position:absolute;left:169px;top:1104px;width:333px;height:333px;z-index:5;">
+<img src="images/truth-gif-template.gif" id="Image2" alt="" width="333" height="333"></div>
 </body>
 </html>
