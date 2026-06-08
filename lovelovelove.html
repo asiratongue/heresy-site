@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<link href="heresyworld.css" rel="stylesheet">
+<link href="lovelovelove.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="wb_Text2" style="position:absolute;left:231px;top:0px;width:902px;height:90px;z-index:1;">
+<span style="color:#FFFFFF;font-family:'Bebas Neue';font-size:75px;">&quot;LANDING &quot;</span></div>
+<div id="Html1" style="position:absolute;left:9px;top:90px;width:683px;height:528px;z-index:2">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    </head>
+<body>
+
+<div class="artist-portal-container">
+    <form id="release-signup-form" action="https://assets.mailerlite.com/jsonp/2415409/forms/189661910826746998/subscribe" method="POST" target="ghost-frame">
+        
+        <input type="hidden" name="ml-submit" value="1" />
+        <input type="hidden" name="ajax" value="1" />
+        
+        <div class="portal-input-wrapper">
+            <input 
+                type="email" 
+                name="fields[email]" 
+                id="fan-email" 
+                placeholder="ENTER EMAIL FOR EARLY ACCESS (OPTIONAL)" 
+                autocomplete="off"
+            />
+        </div>
+
+        <div class="portal-link-wrapper">
+            <button type="submit" id="spotify-direct-btn">Truth</button>
+        </div>
+
+    </form>
+</div>
+
+<iframe name="ghost-frame" id="ghost-frame" style="display:none;"></iframe>
+
+<script>
+document.getElementById('release-signup-form').addEventListener('submit', function(e) {
+    var emailInput = document.getElementById('fan-email');
+    var emailVal = emailInput.value.trim();
+    var btn = document.getElementById('spotify-direct-btn');
+
+    // SCENARIO 1: They left it blank. Don't wait, just go to Spotify immediately.
+    if (emailVal === "") {
+        e.preventDefault(); 
+        window.location.href = "spotify:artist:6MNAaYgMqEhU5rXvo32oRN";
+        setTimeout(function() {
+            window.location.href = "https://open.spotify.com/artist/6MNAaYgMqEhU5rXvo32oRN";
+        }, 1000);
+        return;
+    }
+
+    // SCENARIO 2: They entered an email. 
+    // We let the form submit natively to the iframe. DO NOT use e.preventDefault() here.
+    
+    // Give visual feedback so they know it registered
+    btn.classList.add('processing');
+
+    // Wait exactly 800ms. This is the "sweet spot" that gives the phone's network 
+    // enough time to securely hand the data off to MailerLite before we kill the browser tab's current state.
+    setTimeout(function() {
+        // Now launch Spotify
+        window.location.href = "spotify:artist:6MNAaYgMqEhU5rXvo32oRN";
+        
+        // Desktop fallback
+        setTimeout(function() {
+            window.location.href = "https://open.spotify.com/artist/6MNAaYgMqEhU5rXvo32oRN";
+            btn.classList.remove('processing'); // reset button
+        }, 1000);
+    }, 800);
+});
+</script>
+
+</body>
+</html></div>
+<div id="wb_Image1" style="position:absolute;left:119px;top:241px;width:133px;height:133px;z-index:3;">
+<img src="images/test.gif" id="Image1" alt="" width="133" height="133"></div>
+</body>
+</html>
