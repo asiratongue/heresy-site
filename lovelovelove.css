@@ -45,6 +45,20 @@ input:focus, textarea:focus, select:focus
 {
    text-align: left;
 }
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
         body, html {
             margin: 0;
             padding: 0;
@@ -73,7 +87,7 @@ input:focus, textarea:focus, select:focus
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 0px;
             width: 100%;
         }
 
@@ -83,13 +97,13 @@ input:focus, textarea:focus, select:focus
 
         #fan-email {
             width: 100%;
-            padding: 14px 0;
+            padding: 14px 0 4px 0;
             font-size: 11px;
             letter-spacing: 0.5px;
             background: white;
             border: none;
             border-bottom: 1px solid #000000;
-            color: #000000;
+            color: #FF0000;
             box-sizing: border-box;
             text-align: center;
             outline: none;
@@ -104,7 +118,7 @@ input:focus, textarea:focus, select:focus
         }
 
         #fan-email::placeholder {
-            color: #000000;
+            color: #FF0000;
             opacity: 0.35;
         }
 
@@ -124,9 +138,9 @@ input:focus, textarea:focus, select:focus
 
         /* Controls the size and behavior of your custom button image */
         #spotify-direct-btn img {
-            width: 350px;           /* Keeps your image from stretching out of proportion */
+            width: 250px;           /* Keeps your image from stretching out of proportion */
             max-width: 2000px;      /* Restricts total size. Change this to make it bigger or smaller! */
-            height: 1oopx;
+            height: loopx;
             display: block;
             border: none;
         }
