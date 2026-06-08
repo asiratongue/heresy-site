@@ -1,0 +1,54 @@
+body
+{
+   background-color: #000000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+.plain-link-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#spotify-direct-btn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px; /* Clean, slightly larger text size */
+  font-weight: normal;
+  text-decoration: underline; /* Standard plain link look */
+  color: #FF0000; /* Set link color to Red */
+  cursor: pointer;
+}
+
+/* Optional: Slight color shift on hover so users know it's interactive */
+#spotify-direct-btn:hover {
+  color: #CC0000; 
+}

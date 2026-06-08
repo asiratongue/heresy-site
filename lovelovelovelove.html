@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<link href="heresyworld.css" rel="stylesheet">
+<link href="lovelovelovelove.css" rel="stylesheet">
+</head>
+<body>
+<div id="Html1" style="position:absolute;left:195px;top:108px;width:609px;height:624px;z-index:0">
+<!-- Centered Container -->
+<div class="plain-link-container">
+  <!-- Native App Deep Link Link -->
+  <a href="spotify:artist:6MNAaYgMqEhU5rXvo32oRN" id="spotify-direct-btn">
+     Truth
+  </a>
+</div>
+
+<!-- Plain Centering Layout -->
+
+<script>
+// Smart fallback: If they are on a desktop browser without the app, send to the web version
+document.getElementById('spotify-direct-btn').addEventListener('click', function(e) {
+    var start = Date.now();
+    setTimeout(function() {
+        if (Date.now() - start < 1500) {
+            // App didn't open, redirect to web player
+            window.location.href = "https://open.spotify.com/artist/6MNAaYgMqEhU5rXvo32oRN";
+        }
+    }, 1000);
+});
+</script></div>
+</body>
+</html>
