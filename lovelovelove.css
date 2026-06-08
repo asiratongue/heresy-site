@@ -124,7 +124,7 @@ input:focus, textarea:focus, select:focus
 
         /* Controls the size and behavior of your custom button image */
         #spotify-direct-btn img {
-            width: 500px;           /* Keeps your image from stretching out of proportion */
+            width: 350px;           /* Keeps your image from stretching out of proportion */
             max-width: 2000px;      /* Restricts total size. Change this to make it bigger or smaller! */
             height: 1oopx;
             display: block;
